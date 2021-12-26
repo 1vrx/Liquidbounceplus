@@ -25,7 +25,6 @@ public class VerusHop extends SpeedMode {
                 if (mc.thePlayer.onGround) {
                     mc.thePlayer.jump();
                     MovementUtils.strafe(0.48F);
-                else mc.theplayer.jump();
                 }
                 MovementUtils.strafe();
             }
