@@ -19,12 +19,13 @@ public class VerusHop extends SpeedMode {
     }
     @Override
     public void onUpdate() {
-        if (!mc.thePlayer.isInWeb && !mc.thePlayer.isInLava() && !mc.thePlayer.isInWater() && !mc.thePlayer.isOnLadder() && !mc.thePlayer.onGround == null) {
+        if (!mc.thePlayer.isInWeb && !mc.thePlayer.isInLava() && !mc.thePlayer.isInWater() && !mc.thePlayer.isOnLadder() && mc.thePlayer.onGround == null) {
             if (MovementUtils.isMoving()) {
                 mc.gameSettings.keyBindJump.pressed = false;
                 if (mc.thePlayer.onGround) {
                     mc.thePlayer.jump();
                     MovementUtils.strafe(0.48F);
+                else mc.theplayer.jump();
                 }
                 MovementUtils.strafe();
             }
