@@ -12,14 +12,14 @@ import net.ccbluex.liquidbounce.utils.MovementUtils;
 public class VerusHop extends SpeedMode {
 
     public VerusHop() {
-        super("VerusHop");
+        super("VerusTest");
     }
     @Override
     public void onMotion() {
     }
     @Override
     public void onUpdate() {
-        if (!mc.thePlayer.isInWeb && !mc.thePlayer.isInLava() && !mc.thePlayer.isInWater() && !mc.thePlayer.isOnLadder() && mc.thePlayer.ridingEntity == null) {
+        if (!mc.thePlayer.isInWeb && !mc.thePlayer.isInLava() && !mc.thePlayer.isInWater() && !mc.thePlayer.isOnLadder() && !mc.thePlayer.onGround == null) {
             if (MovementUtils.isMoving()) {
                 mc.gameSettings.keyBindJump.pressed = false;
                 if (mc.thePlayer.onGround) {
